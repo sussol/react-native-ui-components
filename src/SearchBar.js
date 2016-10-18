@@ -17,6 +17,7 @@ const defaultStyles = StyleSheet.create({
     height: 40,
     fontSize: 16,
     backgroundColor: 'rgba(0, 0, 0, 0)',
+    width: 500,
   },
 });
 
