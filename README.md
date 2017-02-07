@@ -1,4 +1,4 @@
-react-native-ui-components
+# react-native-ui-components
 
 ## Installation
 ```npm install --save react-native-ui-components```
