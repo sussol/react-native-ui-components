@@ -28,7 +28,7 @@ export class SearchBar extends React.Component {
   }
 
   render() {
-    const { color, ...textInputProps } = this.props;
+    const { color, onChange, ...textInputProps } = this.props;
     return (
       <TouchableOpacity
         style={[defaultStyles.container, { borderColor: color }]}
@@ -37,6 +37,7 @@ export class SearchBar extends React.Component {
         <Icon name="search" size={40} color={color} />
         <TextInput
           {...textInputProps}
+          onChange={(event) => onChange(event.nativeEvent.text)}
           ref={(reference) => (this.inputReference = reference)}
           underlineColorAndroid="transparent"
         />
