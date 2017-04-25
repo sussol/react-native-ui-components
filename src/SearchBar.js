@@ -41,6 +41,7 @@ export class SearchBar extends React.Component {
           onChange={(event) => onChange(event.nativeEvent.text)}
           ref={(reference) => (this.inputReference = reference)}
           underlineColorAndroid="transparent"
+          placeholderTextColor={color}
         />
       </TouchableOpacity>
     );
