@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   StyleSheet,
   Text,
@@ -31,10 +32,10 @@ export function Button(props) {
 Button.propTypes = {
   style: View.propTypes.style,
   textStyle: Text.propTypes.style,
-  onPress: React.PropTypes.func,
-  text: React.PropTypes.string,
-  isDisabled: React.PropTypes.bool,
-  disabledColor: React.PropTypes.string,
+  onPress: PropTypes.func,
+  text: PropTypes.string,
+  isDisabled: PropTypes.bool,
+  disabledColor: PropTypes.string,
 };
 
 const styles = StyleSheet.create({

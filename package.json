@@ -1,6 +1,6 @@
 {
   "name": "react-native-ui-components",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Handy UI components for React Native apps",
   "repository": "https://github.com/sussol/react-native-ui-components.git",
   "author": "Sustainable Solutions (NZ) Ltd.",
@@ -19,9 +19,10 @@
     "eslint-plugin-react": "^5.2.2"
   },
   "peerDependencies": {
-    "react-native-vector-icons": "^2.0.2",
+    "react-native-vector-icons": "*",
     "react-native": "^0.35.0",
-    "react": "^15.3.2",
-    "realm": "^0.14.1"
+    "react": "*",
+    "prop-types": "*",
+    "realm": "*"
   }
 }

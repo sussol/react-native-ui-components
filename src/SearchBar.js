@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   StyleSheet,
   TextInput,
@@ -47,8 +48,8 @@ export class SearchBar extends React.Component {
 }
 
 SearchBar.propTypes = {
-  color: React.PropTypes.string,
-  onChange: React.PropTypes.func,
+  color: PropTypes.string,
+  onChange: PropTypes.func,
   style: TextInput.propTypes.style,
 };
 
