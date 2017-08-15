@@ -29,6 +29,15 @@ A tappable component that looks like a button, allowing customised styling, labe
 />
 ```
 
+### ProgressBar
+Basic progress bar with the ability to set how far through some process is.
+
+| Prop Name  | Type     | Description                                                                                                             |
+| ---------- | -------- | ----------------------------------------------------------------------------------------------------------------------- |
+| progress   | integer  | The current number representing progress (compared to total, see below)                                                 |
+| total      | integer  | The total needed to finish                                                                                              |
+| isComplete | boolean  | Will fill the progress bar to the end no matter what the progress. Useful for error states                              |
+
 ### SearchBar
 A text field with a search icon that appears as a search bar. Will not actually filter a dataset itself, it is a dumb component doing the display work only, and leaving the business logic for someone else.
 
@@ -41,7 +50,7 @@ A text field with a search icon that appears as a search bar. Will not actually 
 ```
 onSearchChange(searchTerm) {
   this.setState({ searchTerm: searchTerm });
-}  
+}
 
 renderSearchBar() {
   const { pageStyles, searchBarColor } = this.props;
