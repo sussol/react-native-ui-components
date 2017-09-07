@@ -74,11 +74,11 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   actionNumber: {
-    width: 5,
-    height: 5,
-    borderRadius: 5/2,
+    width: 20,
+    height: 20,
+    borderRadius: 20/2,
     backgroundColor: '#CDCDCD'
-  }
+  },
   actionNumberText: {
     fontSize: 12,
     fontWeight: '500',
