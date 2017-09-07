@@ -45,8 +45,10 @@ export function Button(props) {
       underlayColor="#B5B5B5"
       onPress={onPress}
     >
-      <Text style={textStyle}>{text}</Text>
-      {renderActionNumber()}
+      <View>
+        <Text style={textStyle}>{text}</Text>
+        {renderActionNumber()}
+      </View>
     </TouchableHighlight>
   );
 }
