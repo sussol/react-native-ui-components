@@ -15,9 +15,9 @@ export function Button(props) {
     text,
     textStyle,
     style,
-    actionNumber,
-    actionNumberStyle,
-    actionNumberTextStyle,
+    actionCount,
+    actionCountStyle,
+    actionCountTextStyle,
   } = props;
 
   if (isDisabled) {
@@ -28,12 +28,12 @@ export function Button(props) {
     );
   }
 
-  function renderActionNumber() {
-    if (!actionNumber) return null;
+  function renderActionCount() {
+    if (!actionCount) return null;
     return (
-      <View style={[styles.actionNumber, actionNumberStyle]}>
-        <Text style={[styles.actionNumberText, actionNumberTextStyle]}>
-          {actionNumber}
+      <View style={[styles.actionCount, actionCountStyle]}>
+        <Text style={[styles.actionCountText, actionCountTextStyle]}>
+          {actionCount}
         </Text>
       </View>
     );
@@ -41,13 +41,12 @@ export function Button(props) {
 
   return (
     <TouchableHighlight
-      style={style}
       underlayColor="#B5B5B5"
       onPress={onPress}
     >
-      <View>
+      <View style={[style, { overflow: 'visible' }]}>
         <Text style={textStyle}>{text}</Text>
-        {renderActionNumber()}
+        {renderActionCount()}
       </View>
     </TouchableHighlight>
   );
@@ -60,10 +59,12 @@ Button.propTypes = {
   text: PropTypes.string,
   isDisabled: PropTypes.bool,
   disabledColor: PropTypes.string,
-  actionNumber: PropTypes.number,
-  actionNumberStyle: Text.propTypes.style,
-  actionNumberTextStyle: Text.propTypes.style,
+  actionCount: PropTypes.number,
+  actionCountStyle: Text.propTypes.style,
+  actionCountTextStyle: Text.propTypes.style,
 };
+
+const ACTION_CIRCLE_SIZE = 20;
 
 const styles = StyleSheet.create({
   button: {
@@ -75,16 +76,20 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '500',
   },
-  actionNumber: {
-    width: 20,
-    height: 20,
-    borderRadius: 20/2,
-    backgroundColor: '#CDCDCD'
+  actionCount: {
+    position: 'absolute',
+    bottom: -ACTION_CIRCLE_SIZE / 2,
+    right: -ACTION_CIRCLE_SIZE / 2,
+    width: ACTION_CIRCLE_SIZE,
+    height: ACTION_CIRCLE_SIZE,
+    borderRadius: ACTION_CIRCLE_SIZE / 2,
+    overflow: 'visible',
+    backgroundColor: '#CDCDCD',
   },
-  actionNumberText: {
+  actionCountText: {
     fontSize: 12,
     fontWeight: '500',
-  }
+  },
 });
 
 Button.defaultProps = { // 'styles' needs to be declared before use!
