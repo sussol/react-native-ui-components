@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 
 export const getProgressPercentage = (progress, total) =>
   (progress >= total ? 100 : (progress / total) * 100);
@@ -19,9 +20,9 @@ export const ProgressBar = ({ progress, total, isComplete }) => (
 );
 
 ProgressBar.propTypes = {
-  total: React.PropTypes.number,
-  progress: React.PropTypes.number,
-  isComplete: React.PropTypes.bool,
+  total: PropTypes.number,
+  progress: PropTypes.number,
+  isComplete: PropTypes.bool,
 };
 
 ProgressBar.defaultProps = {
