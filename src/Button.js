@@ -5,6 +5,7 @@ import {
   Text,
   TouchableHighlight,
   View,
+  ViewPropTypes,
 } from 'react-native';
 
 export function Button(props) {
@@ -30,7 +31,7 @@ export function Button(props) {
 }
 
 Button.propTypes = {
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
   textStyle: Text.propTypes.style,
   onPress: PropTypes.func,
   text: PropTypes.string,

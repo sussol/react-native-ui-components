@@ -1,6 +1,6 @@
 {
   "name": "react-native-ui-components",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Handy UI components for React Native apps",
   "repository": "https://github.com/sussol/react-native-ui-components.git",
   "author": "Sustainable Solutions (NZ) Ltd.",
@@ -20,7 +20,7 @@
   },
   "peerDependencies": {
     "react-native-vector-icons": "*",
-    "react-native": "*",
+    "react-native": ">= 0.44.0",
     "react": "*",
     "prop-types": "*",
     "realm": "*"
