@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
 
 export const getProgressPercentage = (progress, total) =>
   (progress >= total ? 100 : (progress / total) * 100);
